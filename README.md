@@ -6,6 +6,7 @@ As the configuration involves some internal setup before actually performing the
 
 # How to use
 
+* Add your JDBC Libraries to `sql_drivers`
 * Add your JDBC connection parameters and query to `core_config/solr-data-config.xml` (see section below for details)
 * Add your fields to `core_config/field-config.json` (see section below for details)
 * Build and run your image
