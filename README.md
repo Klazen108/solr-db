@@ -55,6 +55,12 @@ Entries in `field-config.json` should be specified in the format expected by the
 
 Add as many fields as you would like in the JSON array. These map to the fields defined in your `solr-data-config.xml` document.
 
+Here is an example of the API call that would be issued to create the first field in the array:
+```
+curl -s -X POST -H 'Content-type:application/json' --data-binary '{\"add-field\":{"name":"CUSTOMER_NAME","type":"string","stored":true}}' $serverurl/$CORE_NAME/schema"
+```
+You can view the API interface and how the calls are built at the end of [create_core.sh](create_core.sh).
+
 # Switching to a Production Instance
 
 Once you are comfortable with the core setup, you can use the files in this package to apply the changes to your own instance. 
