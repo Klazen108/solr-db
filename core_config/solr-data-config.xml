@@ -1,0 +1,18 @@
+<dataConfig>
+<dataSource type="JdbcDataSource" 
+            driver="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/mydb1" 
+            user="root" 
+            password=""/>
+<document>
+  <entity name="customer"  
+    pk="id"
+    query="select id,name from customers"
+  >      
+  <!--
+    deltaImportQuery="SELECT id,name from products WHERE id='${dih.delta.id}'"
+    deltaQuery="SELECT id FROM products  WHERE updated_at > '${dih.last_index_time}'"
+  -->
+  </entity>
+</document>
+</dataConfig>
